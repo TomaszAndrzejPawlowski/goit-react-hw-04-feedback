@@ -6,4 +6,9 @@
   font-size: 18px;
   font-weight: 700;
   padding: 0 10px;
+  cursor: pointer;
+}
+
+.rateButtons:active {
+  background-color: rgb(0, 0, 255, 0.1);
 }

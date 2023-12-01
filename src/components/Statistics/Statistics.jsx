@@ -1,13 +1,8 @@
-import propTypes from 'prop-types';
 import css from './Statistics.module.css';
+import { useRatingsContext } from 'components/RatingsContext/RatingsContext';
 
-export const Statistics = ({
-  good,
-  neutral,
-  bad,
-  total,
-  positivePercentage,
-}) => {
+export const Statistics = () => {
+  const { good, neutral, bad, total, positivePercentage } = useRatingsContext();
   return (
     <>
       <ul className={css.statisticsList}>
@@ -19,12 +14,4 @@ export const Statistics = ({
       </ul>
     </>
   );
-};
-
-Statistics.propTypes = {
-  good: propTypes.number.isRequired,
-  neutral: propTypes.number.isRequired,
-  bad: propTypes.number.isRequired,
-  total: propTypes.number.isRequired,
-  positivePercentage: propTypes.number.isRequired,
 };
