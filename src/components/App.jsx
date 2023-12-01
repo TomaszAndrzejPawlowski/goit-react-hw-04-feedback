@@ -17,7 +17,7 @@ export const App = () => {
 
   useEffect(() => {
     countTotalRatings();
-  }, [good, neutral, bad]);
+  }, [good, neutral, bad, countTotalRatings]);
 
   useEffect(() => {
     countPositivePercentage();

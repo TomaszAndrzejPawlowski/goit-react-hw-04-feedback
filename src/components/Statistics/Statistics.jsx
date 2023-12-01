@@ -1,4 +1,5 @@
 import css from './Statistics.module.css';
+import propTypes from 'prop-types';
 import { useRatingsContext } from 'components/RatingsContext/RatingsContext';
 
 export const Statistics = () => {
@@ -14,4 +15,12 @@ export const Statistics = () => {
       </ul>
     </>
   );
+};
+
+Statistics.propTypes = {
+  good: propTypes.number,
+  neutral: propTypes.number,
+  bad: propTypes.number,
+  total: propTypes.number,
+  positivePercentage: propTypes.number,
 };
